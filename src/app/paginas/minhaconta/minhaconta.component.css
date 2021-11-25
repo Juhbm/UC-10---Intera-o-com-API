@@ -1,0 +1,150 @@
+/* --- CSS página MINHA CONTA --- */
+
+header{
+    background-color: #B8BCBD; /*definindo cor de fundo e altura do header*/
+    height: 315px;
+}
+
+.parte1{
+    width: 1520px; /* definindo largura para espaçar laterais da tela */
+    margin: 0 auto;
+    height: 217px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parte1 img{
+    width: 100%;
+    height: 100%;
+}
+
+hr{ /*linha vermelha que divide o cabeçalho em 2 partes*/
+    width: 100%;
+    border: 0;
+    border-top: 3px solid #FF0101;
+    opacity: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.parte2-menu{
+    width: 100%; 
+    margin: 0 auto;
+}
+
+.gridposicao2{ /*definição da altura da área de menu*/
+    height: 5.5rem; /*30%*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    width: 100%; /*definindo o tamanho do container consegue encaixar os itens internos com flexbox*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a{
+    color: #000000;
+    text-decoration: none;
+    text-transform: initial;
+    font-size: min(36px, 3vw);
+}
+
+.caixa_login{ /*estruturando o espaço de login*/
+    width: 350px;
+    margin: auto;
+    background: #C1C0C0;
+    border-radius: 20% 0;
+    box-shadow: 1px 2px 5px #EE5151;
+    border: 1px solid #EE5151;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    row-gap: 20px;
+}
+
+.inserir{ /*inserir é uma classe dada ao input para diferenciar do input do campo de busca*/
+    width: 100%;
+    height: 46px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000000;
+    transition: 0.5s ease-in-out;
+}
+
+.entrada{ /*div pai que vai abraçar o input e o label*/
+    position: relative; 
+    margin-bottom: 20px;
+}
+
+label{ /* configuração para fazer o Login: e Senha: aparecer no campo de digitação*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(18px); /*o label desce*/
+    transition: all .25s;
+}
+
+.inserir:focus + label{ /*quando campo estiver clicado o texto Login: Senha: sobe e altera cor para vermelho*/
+    transform: translateY(-14px); /* label sobe quando clicar no campo */
+    color: #FF0101;
+}
+
+.inserir:not(:placeholder-shown) + label{ /*ao digitar no campo Login: e Senha: permanecerão acima e na cor vermelha e tornará negrito*/
+    transform: translateY(-14px);
+    color: #FF0101;
+    font-weight: bold;
+}
+
+.inserir::placeholder{ /*deixar o placeholder (Digite aqui...) transparente*/
+    color: transparent;
+}
+
+.clic{ /*botão de ENTRAR*/
+    width: 10rem;
+    padding: 5px 20px;
+    margin: 20px 20px;
+    border-radius: 30px;
+    border: 1px solid #000000c9;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #000000;
+    background: #FEFEFE;
+}
+
+.clic:hover{ /*efeito de mudança de cor ao passar o mouse acima*/
+    background: #000000;
+    color: #FEFEFE;
+    transition: 0.5s ease-in-out;
+}
+
+.links{
+    text-align: center;
+}
+
+.cadastrar{
+    color: #000000;
+}
+
+/* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
+
+@media (max-width: 1520px){
+    .parte1{ 
+        width: 97%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .caixa_login{ /* MINHA CONTA */
+        width: 80%;
+    }
+}

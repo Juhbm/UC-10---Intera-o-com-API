@@ -1,0 +1,124 @@
+hr{
+    width: 100%;
+    border: 0;
+    border-top: 3px solid #FF0101;
+    opacity: 1;   
+}
+
+/* RODAPÉ */
+
+footer{
+    background-color: #B8BCBD;
+    height: 315px;
+}
+
+#rodape{   
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    column-gap: 1rem;
+    justify-content: center;
+}
+
+.endereco{
+    text-align: center;
+    font-size: min(20px, 5vw); /*20px*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formpag_horariofunc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.formpag_horariofunc img{
+    max-width: 100%;
+}
+
+
+.formpag_horariofunc span{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: min(20px, 5vw); /*20px*/
+}
+
+.redes_sociais{
+    text-align: center;
+    font-size: min(20px, 5vw); /*20px*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.icon_redesSociais{
+    display: flex;
+    flex-direction: row;
+    gap: 25px; 
+}
+
+.icon_redesSociais img{
+    max-width: 100%;
+}
+
+/* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
+
+@media (max-width: 1156px){
+    .endereco, .formpag_horariofunc span, .redes_sociais{
+        font-size: min(18px, 2.5vw);
+    }
+
+    .formpag_horariofunc img{
+        max-width: 90%;
+    }
+
+    .icon_redesSociais img{
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 862px){    
+    .endereco, .formpag_horariofunc span, .redes_sociais{
+        font-size: min(16px, 2vw);
+    }
+
+    .icon_redesSociais{
+        gap: 5px;
+    }
+
+    .icon_redesSociais img{
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 680px){
+    #rodape{
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    footer{
+        height: 100%;
+    }
+
+    #rodape{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .endereco, .formpag_horariofunc span, .redes_sociais{
+        font-size: 12px;
+        margin-top: 10px;   
+    }
+}

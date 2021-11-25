@@ -1,0 +1,137 @@
+/* --- CSS página PRODUTOS --- */
+
+.campo_titulo{ /*definindo o tamanho do container consegue encaixar os itens internos com flexbox*/
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background: #000000;
+    width: 35rem; 
+    height: 4.5rem; 
+    padding: 0.25rem; 
+    border-radius: 40px;
+    display: flex; /*essa configuracao...(continua no .box p)*/
+    justify-content: center;
+    align-items: center;
+}
+
+.box p{
+    margin: 0;
+    color: #FEFEFE;
+    font-size: min(44px, 7vw); /*48px*/
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center; /*... + essa configuracao, alinha o texto no centro*/
+}
+
+.produtos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    column-gap: 200px;
+    row-gap: 50px;
+    margin-bottom: 100px;
+}
+
+.card_prod{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background: #FEFEFE;
+    box-shadow: 3px 3px 2px 1px #c1c0c0; /*leve sombreado nos cards*/
+    border-radius: 15px;
+    border: 1px solid #C1C0C0;
+    width: 18rem;
+    height: 30rem;
+}
+
+.card_prod .icone{
+    width: 16rem;
+    height: 16rem;
+}
+
+.card_prod .icone img{
+    width: 100%;
+}
+
+.card_prod .botao{
+    margin-bottom: 10px 0px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    background: #dad8d8;
+    border: 0;
+    padding: 10px 10px;
+    margin: 20px 20px;
+    font-size: 1.25rem;
+    width: 12rem;
+}
+
+.card_prod button:hover{
+    background: #000000;
+    color: #FEFEFE;
+    transition: all 0.5s;
+}
+
+/* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
+
+@media (max-width: 1920px){
+    .produtos{ /* PRODUTOS */
+        column-gap: 300px;
+        row-gap: 80px;
+    }
+}
+
+@media (max-width: 1520px){
+    .produtos{ /* PRODUTOS */
+        column-gap: 150px;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 1259px){
+    .produtos{ /* PRODUTOS */
+        column-gap: 80px;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 862px){
+    .box{
+        width: 30rem;
+        height: 3.5rem;
+    }
+
+    .box p{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 680px){
+    .box{
+        width: 25rem;
+        height: 3.5rem;  
+    }
+
+    .box p{
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .box{
+        width: 20rem;
+        height: 3.5rem;
+    }
+
+    .box p{
+        font-size: 22px;
+    }
+}

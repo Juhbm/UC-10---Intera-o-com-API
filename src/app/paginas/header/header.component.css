@@ -1,0 +1,306 @@
+/* CABEÇALHO */
+
+header{
+    background-color: #B8BCBD; /*definindo cor de fundo e altura do header*/
+    height: 315px;
+}
+
+.parte1{
+    width: 1520px; /* definindo largura para espaçar laterais da tela */
+    margin: 0 auto;
+    height: 217px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parte1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.barra_pesquisa{
+    background: #FEFEFE;
+    width: 40%;
+    height: 3rem;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FF0101;
+    display: flex;
+    flex-direction: row;
+}
+
+::-webkit-input-placeholder{ /* cor do texto "Pesquise..." na barra de pesquisa */
+    color: #C1C0C0;
+}
+
+.pesquisa{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #000000;
+    font-size: 1.25rem;
+    width: 540px;
+    margin-left: 2%; 
+}
+
+.pesquisa_btn{
+    width: 3rem;
+    height: 2.75rem;
+    border-radius: 40%;
+    margin-right: 2%;
+}
+
+.pesquisa_btn img{
+    width: 100%;
+    height: 100%;
+}
+
+.cadastro_compras{ /*definindo o espaco container para minha conta e meu carrinho*/
+    width: 350px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* é relative para agrupar a bolinha da quantidade de produtos nessa div*/
+    font-size: 1.5rem;
+}
+
+.cadastro_compras .minha_conta{ /*alinhamento em coluna do icone com o texto*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro_compras .meu_carrinho{ /*alinhamento em coluna do icone com o texto*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro_compras .icons img{
+    width: 3.6rem;
+    height: 3.6rem;
+}
+
+.cadastro_compras #cart_total{ /*criação da bolinha de quantidades de prod no carrinho*/
+    font-size: 1rem;
+    position: absolute;
+    top: -15px;
+    right: 25px;
+    background-color: #000000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 100%;
+    color: #FEFEFE;
+}
+
+.cadastro_compras #i_cart_total{ /*index*/
+    font-size: 1rem;
+    position: absolute;
+    top: -15px;
+    right: 25px;
+    background-color: #000000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 100%;
+    color: #FEFEFE;
+}
+
+hr{ /*linha vermelha que divide o cabeçalho em 2 partes*/
+    width: 100%;
+    border: 0;
+    border-top: 3px solid #FF0101;
+    opacity: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.parte2-menu{
+    width: 100%; 
+    margin: 0 auto;
+}
+
+.gridposicao2{ /*definição da altura da área de menu*/
+    height: 5.5rem; /*30%*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    width: 100%; /*definindo o tamanho do container consegue encaixar os itens internos com flexbox*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a{
+    color: #000000;
+    text-decoration: none;
+    text-transform: initial;
+    font-size: min(36px, 3vw);
+}
+
+/* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
+
+@media (max-width: 1920px){ 
+    .destaques{ /*espaçamento para 6 cards em 2 filas no index*/
+        column-gap: 300px;
+        row-gap: 80px;
+    }
+}
+
+@media (max-width: 1520px){
+    .parte1{ 
+        width: 97%;
+    }
+}
+
+@media (max-width: 1084px){
+    .cadastro_compras{
+        font-size: 1.3rem;
+    }
+
+    .cadastro_compras #cart_total{
+        right: 18px;
+    }
+
+    .cadastro_compras #i_cart_total{ /*index*/
+        right: 18px;
+    }
+}
+
+@media (max-width: 950px){    
+    .barra_pesquisa{
+        width: 40%;
+        height: 2.75rem;
+    }
+
+    .pesquisa{
+        font-size: min(24px, 2vw); 
+    }
+
+    .pesquisa_btn{
+        width: 3rem;
+        height: 2.5rem;
+    }
+
+    .cadastro_compras{
+        width: 400px;
+    }
+}
+
+@media (max-width: 862px){
+    .cadastro_compras .minha_conta{
+        text-align: center;
+    }
+
+    .cadastro_compras .meu_carrinho{
+        text-align: center;
+    }
+
+    .cadastro_compras{
+        font-size: 1.0rem;
+    }
+
+    .cadastro_compras #cart_total{
+        top: -5px;
+        right: 5px;
+    }
+    
+    .cadastro_compras #i_cart_total{ /*index*/
+        top: -15px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 846px){
+    .cadastro_compras #cart_total{
+        top: -5px;
+        right: 5px;
+    }
+
+    .cadastro_compras #i_cart_total{ /*index*/
+        top: -15px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 680px){
+    .parte1{ /*alinha os conteúdos do cabeçalho: logo em cima/ busca e icones abaixo*/
+        height: 240px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .barra_pesquisa{ 
+        height: 2rem;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .cadastro_compras{
+        width: 200px;
+        height: 80px;
+        justify-content: space-between;
+        font-size: 0.8rem;
+    }
+
+    .cadastro_compras #cart_total{
+        top: -5px;
+        right: -2px;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .cadastro_compras #i_cart_total{ /*index*/
+        top: -20px;
+        right: -5px;
+        padding: 0.2rem 0.6rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .pesquisa{
+        font-size: 0.5rem;
+    }
+
+    .pesquisa_btn{
+        width: 50%;
+    }
+
+    .menu a{
+        font-size: 14px;
+    }
+
+    .cadastro_compras .icons{
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .minha_conta p{
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    .meu_carrinho p{
+        margin: 0;
+        margin-top: 5px;
+    }
+
+    .cadastro_compras #cart_total{
+        top: -12px;
+        right: 2px;
+    }
+
+    .cadastro_compras #i_cart_total{ /*index*/
+        top: -15px;
+        right: 2px;
+    }
+
+    .cadastro_compras{
+        width: 170px;
+        height: 70px;
+        justify-content: space-around;
+    }
+}

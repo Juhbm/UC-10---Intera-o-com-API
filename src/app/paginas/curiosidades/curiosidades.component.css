@@ -1,0 +1,145 @@
+/* --- CSS página CURIOSIDADES --- */
+
+.titulo{
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px; 
+}
+
+.titulo img{
+    width:80%
+}
+
+.pergunta{
+    width: 300px;
+    height: 50px;
+    background-color: #000000;
+    color: #FEFEFE;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.curiosidades{
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;   
+}
+
+.imagem{
+    width: 20rem;
+    height: 15rem;
+}
+
+.curios1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 5px 5px 2px 1px #B8BCBD;
+    border: 1px solid #B8BCBD;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.curios2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    box-shadow: -5px 5px 2px 1px #B8BCBD;
+    border: 1px solid #B8BCBD;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.ptodos{
+    font-size: 1.5rem;
+    text-align:center;
+}
+
+.campo_titulo{ /*definindo o tamanho do container consegue encaixar os itens internos com flexbox*/
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background: #000000;
+    width: 35rem; 
+    height: 4.5rem; 
+    padding: 0.25rem; 
+    border-radius: 40px;
+    display: flex; /*essa configuracao...(continua no .box p)*/
+    justify-content: center;
+    align-items: center;
+}
+
+.box p{
+    margin: 0;
+    color: #FEFEFE;
+    font-size: min(44px, 7vw); /*48px*/
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center; /*... + essa configuracao, alinha o texto no centro*/
+}
+
+/* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
+
+@media (max-width: 1084px){
+    .curiosidades{ /* CURIOSIDADES */
+        width: 80%;
+    }
+}
+
+@media (max-width: 950px){
+    .ptodos{ /* CURIOSIDADES */
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 862px){
+    .imagem{ /* CURIOSIDADES */
+        width: 15rem;
+        height: 10rem;
+    }
+}
+
+@media (max-width: 680px){
+    .ptodos{ /* CURIOSIDADES */
+        font-size: 1rem;
+    }
+
+    .imagem{ /* CURIOSIDADES */
+        width: 10rem;
+        height: 8rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .imagem{ /* CURIOSIDADES */
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .ptodos{ /* CURIOSIDADES */
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,287 @@
+/* SEÇÃO DE DESTAQUES */
+
+.campo_titulo{ /*definindo o tamanho do container consegue encaixar os itens internos com flexbox*/
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background: #000000;
+    width: 35rem; 
+    height: 4.5rem; 
+    padding: 0.25rem; 
+    border-radius: 40px;
+    display: flex; /*essa configuracao...(continua no .box p)*/
+    justify-content: center;
+    align-items: center;
+}
+
+.box p{
+    margin: 0;
+    color: #FEFEFE;
+    font-size: min(44px, 7vw); /*48px*/
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center; /*... + essa configuracao, alinha o texto no centro*/
+}
+
+.destaques{ /*configuracao externa dos cards*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    column-gap: 200px;
+    row-gap: 50px;
+}
+
+.destaques .card{ /*configuracoes dos itens internos do card*/
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background: #FEFEFE;
+    box-shadow: 3px 3px 2px 1px #c1c0c0; /*leve sombreado nos cards*/
+    border-radius: 15px;
+    width: 17rem; /*300px*/
+}
+
+.destaques .card:hover{ /*efeito de aumento do card ao passar o mouse acima*/
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+.destaques .card .icon{ /*definindo um tanho para as imagens dos cards*/
+    width: 14rem; /*250px*/
+    height: 14rem;  /*250px*/
+}
+
+.destaques .card img{ /*definindo usar 100% do tamanho das imagens estipulado acima*/
+    width: 100%;
+}
+
+.destaques .card h3{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.destaques .card span{
+    color: #EE5151;
+    text-decoration: line-through;
+}
+
+.destaques .card button{
+    margin-bottom: 10px 0px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    background: #dad8d8;
+    border: 0;
+    padding: 10px 10px;
+    margin: 25px 25px;
+    font-size: 1.5rem; /*24px*/
+    width: 12rem; /*200px*/
+}
+
+.destaques .card button:hover{ /*efeito de transicao de cor do botao comprar ao passar o mause em cima*/
+    background: #000000;
+    color: #FEFEFE;
+    transition: all 0.5s;
+}
+
+/* TEXTOS INFORMATIVOS */
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoPrincipal{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    font-size: min(34px, 10vw); /*34px*/
+}
+
+.avisos{
+    width: 1200px; /* definindo tamanho container dos textos/imgs informativos*/
+    height: 240px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.avisos .parcelamento img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.avisos .entrega img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.avisos .seguranca img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.avisos .assistencia img{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+
+.avisos .parcelamento span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: min(24px, 5vw); /*20px*/
+    text-align: center;
+    margin-top: 5%;
+}
+
+.avisos .entrega span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: min(24px, 5vw); /*20px*/
+    text-align: center;
+    margin-top: 20%;
+}
+
+.avisos .seguranca span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: min(24px, 5vw); /*20px;*/
+    text-align: center;
+    margin-top: 15%;
+}
+
+.avisos .assistencia span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: min(24px, 5vw); /*20px;*/
+    text-align: center;
+    margin-bottom: 30%;
+}
+
+.asterisco{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: min(18px, 4vw); /*18px*/
+}
+
+/* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
+
+@media (max-width: 1920px){ 
+    .destaques{ /*espaçamento para 6 cards em 2 filas no index*/
+        column-gap: 300px;
+        row-gap: 80px;
+    }
+}
+
+@media (max-width: 1520px){
+    .destaques{ 
+        column-gap: 150px;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 1156px){
+    .avisos{
+        width: 90%;
+        font-size: min(18px, 3vw);
+        column-gap: 2rem;
+    }
+}
+
+@media (max-width: 950px){
+    .avisos{
+        width: 80%;
+        column-gap: 2rem;
+    }
+    
+    .avisos .parcelamento span, .avisos .entrega span, .avisos .seguranca span, .avisos .assistencia span{
+        font-size: min(18px, 4vw);
+    }
+}
+
+@media (max-width: 862px){
+    .box{
+        width: 30rem;
+        height: 3.5rem;
+    }
+
+    .box p{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 680px){
+    .box{
+        width: 25rem;
+        height: 3.5rem;  
+    }
+
+    .box p{
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .box{
+        width: 20rem;
+        height: 3.5rem;
+    }
+
+    .box p{
+        font-size: 22px;
+    }
+
+    .avisos{
+        margin-top: 30px;
+    }
+
+    .avisos .parcelamento span, .avisos .entrega span, .avisos .seguranca span, .avisos .assistencia span{
+        font-size: min(18px, 3.5vw);
+    }
+
+    .asterisco{
+        margin-top: 50px;
+    }
+}

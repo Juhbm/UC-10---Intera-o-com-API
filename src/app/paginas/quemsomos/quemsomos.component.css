@@ -1,0 +1,73 @@
+/* --- CSS página QUEM SOMOS? --- */
+
+main{
+    min-width: 320px;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    row-gap: 20px;
+    background-color: #C1C0C0;
+    padding: 20px;
+    border: 2px dashed #FF0101;
+}
+
+.interrogacao{
+    width: 40vw;
+    height: 40vw;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.diferenciais{
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.pqs{
+    text-align: center;
+    font-size: 1.25rem; 
+}
+
+ul{/*estililização do check point. */
+    list-style-type: '\2705\00A0\00A0';
+    /*Código 2705 utilizado da emojipedia. 
+    A '\' é para colocar na frente do código para o check tornar visível.
+    00A0 dá 1 espaço entre o check e a próxima letra. Usei 2 espaços*/
+    list-style-position: inside;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+/* APLICANDO @media query PARA RESPONSIVIDADE - breakpoints - */
+
+@media (max-width: 1156px){
+    main{ /* QUEM SOMOS? */
+        width: 80%;
+    }
+}
+
+@media (max-width: 680px){
+    main{ /* QUEM SOMOS? */
+        border-radius: 1%;
+    }
+}
