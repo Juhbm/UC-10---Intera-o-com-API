@@ -20,19 +20,21 @@
 <div class="caixa_login">
     <h2>Minha Conta</h2>
 
-    <form action="#" method="post">
+<!--Implementando formulário de login em Angular-->
+
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()" action="#" method="post">
         <div class="entrada">
-            <input class="inserir" type="text" id="login" placeholder="Digite seu login aqui...">
-            <label for="login">Login:</label>
+            <input class="inserir" type="email" id="login" name="email" [(ngModel)] = "userModel.email" placeholder="Digite seu e-mail aqui...">
+            <label for="login">Email:</label>
         </div>
 
         <div class="entrada">
-         <input class="inserir" type="password" id="senha" placeholder="Digite sua senha aqui...">
+         <input class="inserir" type="password" id="senha" name="senha" [(ngModel)] = "userModel.senha" placeholder="Digite sua senha aqui...">
          <label for="senha">Senha:</label>
      </div>
 
      <div class="center">
-         <button class="clic">Entrar</button>
+         <button class="clic" type="submit">Entrar</button>
      </div>
     </form>
 
@@ -41,4 +43,3 @@
         <a class="cadastrar" href="#"><p>Fazer meu cadastro</p></a>
     </div>
 </div>
-

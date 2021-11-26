@@ -10,6 +10,7 @@ import { QuemsomosComponent } from './paginas/quemsomos/quemsomos.component';
 import { ProdutosComponent } from './paginas/produtos/produtos.component';
 import { CuriosidadesComponent } from './paginas/curiosidades/curiosidades.component';
 import { MinhacontaComponent } from './paginas/minhaconta/minhaconta.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MinhacontaComponent } from './paginas/minhaconta/minhaconta.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
