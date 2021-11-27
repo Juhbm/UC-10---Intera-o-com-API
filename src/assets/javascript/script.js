@@ -9,14 +9,18 @@
 //-------------------------------------------------------------------------//
 
     /*renderizar os prdoutos no cards criados na index.html*/
-function renderizarDestaques(){
+    console.log("js funciona")
+document.onreadystatechange = x => {(function renderizarDestaques() {
+
+    console.log("função renderizar ok")
+
     let destaque = document.getElementById("destaques")
 
-     console.log("correndo");
+     console.log("iniciando...");
 
     let produtos = [ /* lista dos produtos na seção destaque da index*/
         {   
-            imagem: "img/conjPS4.svg",
+            imagem: "/assets/conjPS4.svg",
             nome: "Conjunto PS4 Completo",
             precoantes: "De: R$ 7.549,90",
             precodepois: "Por: R$ 5.999,90", /* alterei para número somente. porém é um float... o que deve estar interferindo na soma no carrinho*/
@@ -24,7 +28,7 @@ function renderizarDestaques(){
             tag: "um"
         },
         {
-            imagem: "img/ps4Fifa22.svg",
+            imagem: "/assets/ps4Fifa22.svg",
             nome: "Jogo FIFA22 PS4",
             precoantes: "De: R$ 349,90",
             precodepois: "Por: R$ 284,90",
@@ -32,7 +36,7 @@ function renderizarDestaques(){
             tag: "dois"
         },
         {
-            imagem: "img/tecladoGamer.svg",
+            imagem: "/assets/tecladoGamer.svg",
             nome: "Teclado Gamer",
             precoantes: "De: R$ 298,90",
             precodepois: "Por: R$ 199,90",
@@ -40,7 +44,7 @@ function renderizarDestaques(){
             tag: "tres"
         },
         {
-            imagem: "img/cadeiraGamer.svg",
+            imagem: "/assets/cadeiraGamer.svg",
             nome: "Cadeira Gamer",
             precoantes: "De: R$ 1.229,90",
             precodepois: "Por: R$ 899,90",
@@ -48,7 +52,7 @@ function renderizarDestaques(){
             tag: "quatro"
         },
         {
-            imagem: "img/controlePS4.svg",
+            imagem: "/assets/controlePS4.svg",
             nome: "Par de Controle PS4",
             precoantes: "De: R$ 749,90",
             precodepois: "Por: R$ 659,90",
@@ -56,7 +60,7 @@ function renderizarDestaques(){
             tag: "cinco"
         },
         {
-            imagem: "img/mouseGamer.svg",
+            imagem: "/assets/mouseGamer.svg",
             nome: "Mouse Gamer",
             precoantes: "De: R$ 259,90",
             precodepois: "Por: R$ 179,90",
@@ -81,6 +85,7 @@ function renderizarDestaques(){
                     </div>`  /*template string*/
 
         destaque.innerHTML = template;
+
     }
 
     /*ativando o botão de comprar para adicionar o item no carrinho de compras*/
@@ -90,14 +95,17 @@ function renderizarDestaques(){
 
     for (let i=0; i < itens.length; i++){
 
+        console.log("meu loop ok");
+
         /*ao clicar adiciona produto no carrinho*/
         itens[i].addEventListener('click', () => {
             itensQuant(produtos[i]);
+            console.log("adicionado ao carrinho...");
         })
-
-        // console.log("meu loop"); testando se o for está funcionando.
-        // console.log("adicionado ao carrinho"); testando se ao clicar emite esse console.
     }
+
+    onloadItensQuant();
+}())}; /*chamando a função renderizar... sem precisar escrevê-la*/
 
     function onloadItensQuant() { /*essa função fará que a qntdd de itens no carrinho não apague quando atualizar a página.*/
         let prodQuant = localStorage.getItem('itensQuant');
@@ -143,17 +151,9 @@ function renderizarDestaques(){
         localStorage.setItem("produtosNoCarrinho", JSON.stringify(itensCarrinho));
     }
 
-    onloadItensQuant();
-}
-
     //localStorage.getItem armazena o valor no browser. Após atualizar tela, zera o carrinho. Exceto ao usar a função onloadItensQuant() criada acima.
-    // console.log(prodQuant)
-    // console.log (typeof prodQuant) exibir qual tipo está o caractere. Nesse caso: string. (antes do parseInt)
-    // console.log (typeof prodQuant) exibe a mudança string => número (após o parseInt)
     //chamando document. (COM) getElementById ("i_cart_total") pq está como id no span do html. A bolinha de quantidades.
-    //console.log("O produto inserido é:", produto); testando abaixo da function itensQuant... qual o produto inserido.
-    // console.log("Dentro da função");
-    // console.log("Meu produto é: ", produto);
+
 
 /* --- JQUERY --- */ 
 

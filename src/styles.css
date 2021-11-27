@@ -15,3 +15,67 @@
 .body{
     background: #FEFEFE;
 }
+
+/* css dos cards da seção destaque da home após renderização do script.js */
+.destaques{ /*configuracao externa dos cards*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    column-gap: 200px;
+    row-gap: 50px;
+}
+
+.destaques .card{ /*configuracoes dos itens internos do card*/
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background: #FEFEFE;
+    box-shadow: 3px 3px 2px 1px #c1c0c0; /*leve sombreado nos cards*/
+    border-radius: 15px;
+    width: 17rem; /*300px*/
+}
+
+.destaques .card:hover{ /*efeito de aumento do card ao passar o mouse acima*/
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+.destaques .card .icon{ /*definindo um tanho para as imagens dos cards*/
+    width: 14rem; /*250px*/
+    height: 14rem;  /*250px*/
+}
+
+.destaques .card img{ /*definindo usar 100% do tamanho das imagens estipulado acima*/
+    width: 100%;
+}
+
+.destaques .card h3{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.destaques .card span{
+    color: #EE5151;
+    text-decoration: line-through;
+}
+
+.destaques .card button{
+    margin-bottom: 10px 0px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: #000000;
+    background: #dad8d8;
+    border: 0;
+    padding: 10px 10px;
+    margin: 25px 25px;
+    font-size: 1.5rem; /*24px*/
+    width: 12rem; /*200px*/
+}
+
+.destaques .card button:hover{ /*efeito de transicao de cor do botao comprar ao passar o mause em cima*/
+    background: #000000;
+    color: #FEFEFE;
+    transition: all 0.5s;
+}
