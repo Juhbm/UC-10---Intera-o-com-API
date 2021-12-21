@@ -1,0 +1,40 @@
+{
+  "destaques": [
+    {
+      "produto": "Conjunto PS4 Completo",
+      "descricao1": "De: R$ 7.549,90",
+      "descricao2": "Por: R$ 5.999,90",
+      "id": 1
+    },
+    {
+      "produto": "Jogo FIFA22 PS4",
+      "descricao1": "De: R$ 349,90",
+      "descricao2": "Por: R$ 284,90",
+      "id": 2
+    },
+    {
+      "produto": "Teclado Gamer",
+      "descricao1": "De: R$ 298,90",
+      "descricao2": "Por: R$ 199,90",
+      "id": 3
+    },
+    {
+      "produto": "Cadeira Gamer",
+      "descricao1": "De: R$ 1.229,90",
+      "descricao2": "Por: R$ 899,90",
+      "id": 4
+    },
+    {
+      "produto": "Par de Controle PS4",
+      "descricao1": "De: R$ 749,90",
+      "descricao2": "Por: R$ 659,90",
+      "id": 5
+    },
+    {
+      "produto": "Mouse Gamer",
+      "descricao1": "De: R$ 259,90",
+      "descricao2": "Por: R$ 189,90",
+      "id": 6
+    }
+  ]
+}

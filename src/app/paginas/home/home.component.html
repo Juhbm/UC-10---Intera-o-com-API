@@ -38,9 +38,21 @@
 
 </div>
 
-<section class="destaques" id="destaques">   
-    
-    <div class="card">
+<section class="destaques" id="destaques">
+
+    <!--ngFor utilizado para renderizar os destaques realizados na API e devidamente declarados em db.json/destaques.service.ts/destaques.ts/home.component.ts(postman)-->
+    <div *ngFor="let destaques of listaDestaques" class="card">
+        <div class="icon">
+            <img src="assets/conjPS4.svg" alt="Conjunto PS4">
+        </div>
+        <h3>{{destaques.produto}}</h3>
+        <span>{{destaques.descricao1}}</span>
+        <h3>{{destaques.descricao2}}</h3>
+        <button class="add_carrinho">Comprar</button>
+    </div>
+
+
+    <!-- <div class="card">
         <div class="icon">
             <img src="assets/conjPS4.svg" alt="Conjunto PS4">
         </div>
@@ -48,8 +60,8 @@
         <span>De: R$ 7.549,90</span>
         <h3>Por: R$ 5.999,90</h3>
         <button class="add_carrinho">Comprar</button>
-
     </div>
+
     <div class="card">
         <div class="icon">
             <img src="assets/ps4Fifa22.svg" alt="Jogo FIFA22">
@@ -58,8 +70,8 @@
         <span>De: R$ 349,90</span>
         <h3>Por: R$ 284,90</h3>
         <button class="add_carrinho">Comprar</button>
-
     </div>
+
     <div class="card">
         <div class="icon">
             <img src="assets/tecladoGamer.svg" alt="Teclado Gamer">
@@ -68,8 +80,8 @@
         <span>De: R$ 298,90</span>
         <h3>Por: R$ 199,90</h3>
         <button class="add_carrinho">Comprar</button>
-
     </div>
+
     <div class="card">
         <div class="icon">
             <img src="assets/cadeiraGamer.svg" alt="Cadeira Gamer">
@@ -78,8 +90,8 @@
         <span>De: R$ 1.229,90</span>
         <h3>Por: R$ 899,90</h3>
         <button class="add_carrinho">Comprar</button>
-
     </div>
+
     <div class="card">
         <div class="icon">
             <img src="assets/controlePS4.svg" alt="Controles PS4">
@@ -88,8 +100,8 @@
         <span>De: R$ 749,90</span>
         <h3>Por: R$ 659,90</h3>
         <button class="add_carrinho">Comprar</button>
-
     </div>
+
     <div class="card">
         <div class="icon">
             <img src="assets/mouseGamer.svg" alt="Mouse Gamer">
@@ -98,8 +110,8 @@
         <span>De: R$ 259,90</span>
         <h3>Por: R$ 179,90</h3>
         <button class="add_carrinho">Comprar</button>
+    </div> -->
 
-    </div>
 </section>
 
 <!-- INFORMAÇÕES EXTRAS -->

@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule} from '@angular/common/http'; //importa uma classe de uma biblioteca do http
+
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { HeaderComponent } from './paginas/header/header.component';
@@ -21,12 +23,13 @@ import { FormsModule } from '@angular/forms';
     QuemsomosComponent,
     ProdutosComponent,
     CuriosidadesComponent,
-    MinhacontaComponent
+    MinhacontaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
