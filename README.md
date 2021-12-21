@@ -1,12 +1,10 @@
 
 # Projeto-Game-Mania
 
-Projeto de um site e-commerce de loja de games e informática desenvolvido anteriormente, agora, transportado para o Angular.
-
-Desenvolvido por Juliana Barroso - Curso FULL STACK da Escola SENAI - EAD - UC 9 Codificação para Front-End / SA3
+Interação de API json-server no projeto Game Mania. Implementação do CRUD nos produtos em destaques, utilizando o postman.
 
 =======
-# GameManiaAngular
+# GameMania API
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
