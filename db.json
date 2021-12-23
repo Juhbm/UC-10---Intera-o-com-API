@@ -1,39 +1,52 @@
 {
+  "users": [
+    {
+      "email": "juliana@email.com",
+      "password": "$2a$10$fwbsaHOHf7aWhLgYz3nBA.tsU.u2VQLAwM2Mt7jTFu//z2eFICgUO",
+      "id": 1
+    }
+  ],
   "destaques": [
     {
       "produto": "Conjunto PS4 Completo",
       "descricao1": "De: R$ 7.549,90",
       "descricao2": "Por: R$ 5.999,90",
+      "imagem": "assets/conjPS4.svg",
       "id": 1
     },
     {
       "produto": "Jogo FIFA22 PS4",
       "descricao1": "De: R$ 349,90",
       "descricao2": "Por: R$ 284,90",
+      "imagem": "assets/ps4Fifa22.svg",
       "id": 2
     },
     {
       "produto": "Teclado Gamer",
       "descricao1": "De: R$ 298,90",
       "descricao2": "Por: R$ 199,90",
+      "imagem": "assets/tecladoGamer.svg",
       "id": 3
     },
     {
       "produto": "Cadeira Gamer",
       "descricao1": "De: R$ 1.229,90",
       "descricao2": "Por: R$ 899,90",
+      "imagem": "assets/cadeiraGamer.svg",
       "id": 4
     },
     {
       "produto": "Par de Controle PS4",
       "descricao1": "De: R$ 749,90",
       "descricao2": "Por: R$ 659,90",
+      "imagem": "assets/controlePS4.svg",
       "id": 5
     },
     {
       "produto": "Mouse Gamer",
       "descricao1": "De: R$ 259,90",
       "descricao2": "Por: R$ 189,90",
+      "imagem": "assets/mouseGamer.svg",
       "id": 6
     }
   ]

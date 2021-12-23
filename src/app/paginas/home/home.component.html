@@ -43,7 +43,7 @@
     <!--ngFor utilizado para renderizar os destaques realizados na API e devidamente declarados em db.json/destaques.service.ts/destaques.ts/home.component.ts(postman)-->
     <div *ngFor="let destaques of listaDestaques" class="card">
         <div class="icon">
-            <img src="assets/conjPS4.svg" alt="Conjunto PS4">
+            <img [src]= destaques.imagem alt="">
         </div>
         <h3>{{destaques.produto}}</h3>
         <span>{{destaques.descricao1}}</span>
