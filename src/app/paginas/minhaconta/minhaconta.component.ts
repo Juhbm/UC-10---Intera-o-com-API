@@ -21,6 +21,18 @@ export class MinhacontaComponent implements OnInit {
   onSubmit(){
     // console.log(this.userModel) /*this é por causa da sintaxe pq a classe já está criada*/
     
+    //criação da blacklist
+    const listaPalavras: string[] = ["select ", "from ", "drop ", "or", "having ", "group ", "by ", "insert ", "exec ", "\"", "\'", "--", "#", "*", ";"]
+
+    listaPalavras.forEach(palavra => {
+     if(this.userModel.email.toLocaleLowerCase().includes(palavra)) {
+      this.mensagem = "Atenção! Dados inválidos!"
+
+      return;
+     }
+    });
+
+    //validação do email e senha enviado pela api json-server-auth (json-server db.json -m ./node_modules/json-server-auth)
     this.loginService.login(this.userModel).subscribe( (response) => {
       this.mensagem = "Login realizado com sucesso!";
       console.log(response)
