@@ -34,10 +34,10 @@
      </div>
 
      <div class="center">
-         <button class="clic" type="submit">Entrar</button>
+         <button class="clic" id="enviar" type="submit">Entrar</button>
      </div>
     </form>
-    <p *ngIf= " mensagem != '' " >{{ mensagem }}</p>
+    <p id="mensagem" *ngIf= "mensagem != ''" >{{mensagem}}</p>
 
     <div class="links">
         <a class="cadastrar" href="#"><p>Esqueci minha senha</p></a>
