@@ -1,7 +1,7 @@
 
 # Projeto-Game-Mania
 
-Interação de API json-server no projeto Game Mania. Implementação do CRUD nos produtos em destaques e post na página de login utilizando o postman, mensagens de sucesso/erro.
+Interação de API json-server no projeto Game Mania. Implementação do CRUD nos produtos em destaques e post na página de login utilizando o postman, mensagens de sucesso/erro e implementação da blacklist contra ataques do SQL injection.
 
 =======
 # GameMania API
